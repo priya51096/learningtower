@@ -1,9 +1,8 @@
 pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
-articles:
-  articles/Australia_trends: Australia_trends.html
-last_built: 2021-07-29T03:20Z
+articles: {}
+last_built: 2021-08-01T11:26Z
 urls:
   reference: https://ropenscilabs.github.io/learningtower//reference
   article: https://ropenscilabs.github.io/learningtower//articles
