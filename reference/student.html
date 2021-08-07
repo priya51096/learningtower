@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student data from 2000-2018 PISA OECD data — student_year_2000 • learningtower</title>
+<title>Sample Student data from 2000-2018 PISA OECD data — student_subset_2000 • learningtower</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="Student data from 2000-2018 PISA OECD data — student_year_2000" />
-<meta property="og:description" content="A dataset containing scores and other information
+<meta property="og:title" content="Sample Student data from 2000-2018 PISA OECD data — student_subset_2000" />
+<meta property="og:description" content="A sample dataset containing scores and other information
 from the triennial testing of 15 year olds around
 the globe. Original data available from
  https://www.oecd.org/pisa/data/." />
@@ -119,13 +119,13 @@ the globe. Original data available from
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Student data from 2000-2018 PISA OECD data</h1>
+    <h1>Sample Student data from 2000-2018 PISA OECD data</h1>
     <small class="dont-index">Source: <a href='https://github.com/kevinwang09/learningtower/blob/master/R/data.R'><code>R/data.R</code></a></small>
     <div class="hidden name"><code>student.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>A dataset containing scores and other information
+    <p>A sample dataset containing scores and other information
 from the triennial testing of 15 year olds around
 the globe. Original data available from
  <a href='https://www.oecd.org/pisa/data/'>https://www.oecd.org/pisa/data/</a>.</p>
@@ -180,26 +180,27 @@ the globe. Original data available from
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:base’:</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>student_year_2000</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>student_year_2003</span><span class='op'>)</span>
+#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>student_subset_2000</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>student_subset_2003</span><span class='op'>)</span>
 <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind.html'>bind_rows</a></span><span class='op'>(</span>
-<span class='va'>student_year_2000</span>,
-<span class='va'>student_year_2003</span>
+<span class='va'>student_subset_2000</span>,
+<span class='va'>student_subset_2003</span>
 <span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 403,401 × 22</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 4,200 × 22</span>
+#&gt; <span style='color: #949494;'># Groups:   country [49]</span>
 #&gt;    year  country school_id student_id mother_educ father_educ gender computer
 #&gt;    <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;fct&gt;</span>   
-#&gt; <span style='color: #BCBCBC;'> 1</span> 2000  ALB     1001      1          <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 2</span> 2000  ALB     1001      3          <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 3</span> 2000  ALB     1001      6          <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          male   <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 4</span> 2000  ALB     1001      8          <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 5</span> 2000  ALB     1001      11         <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 6</span> 2000  ALB     1001      12         <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 7</span> 2000  ALB     1001      17         <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          male   <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 8</span> 2000  ALB     1001      20         <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'> 9</span> 2000  ALB     1001      21         <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #BCBCBC;'>10</span> 2000  ALB     1001      22         <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
-#&gt; <span style='color: #949494;'># … with 403,391 more rows, and 14 more variables: internet &lt;fct&gt;, math &lt;dbl&gt;,</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span> 2000  ALB     2016      771        <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 2</span> 2000  ALB     1093      428        <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          male   <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 3</span> 2000  ALB     11074     2805       <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          male   <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 4</span> 2000  ALB     25058     4366       <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 5</span> 2000  ALB     5112      1606       <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 6</span> 2000  ALB     2006      769        <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 7</span> 2000  ALB     2130      872        <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          male   <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 8</span> 2000  ALB     1161      673        <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          male   <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'> 9</span> 2000  ALB     23143     4067       <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          female <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #BCBCBC;'>10</span> 2000  ALB     1173      721        <span style='color: #BB0000;'>NA</span>          <span style='color: #BB0000;'>NA</span>          male   <span style='color: #BB0000;'>NA</span>      
+#&gt; <span style='color: #949494;'># … with 4,190 more rows, and 14 more variables: internet &lt;fct&gt;, math &lt;dbl&gt;,</span>
 #&gt; <span style='color: #949494;'>#   read &lt;dbl&gt;, science &lt;dbl&gt;, stu_wgt &lt;dbl&gt;, desk &lt;fct&gt;, room &lt;fct&gt;,</span>
 #&gt; <span style='color: #949494;'>#   dishwasher &lt;fct&gt;, television &lt;fct&gt;, computer_n &lt;fct&gt;, car &lt;fct&gt;,</span>
 #&gt; <span style='color: #949494;'>#   book &lt;fct&gt;, wealth &lt;dbl&gt;, escs &lt;dbl&gt;</span></div></pre>
