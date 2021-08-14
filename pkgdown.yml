@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-08-08T14:37Z
+last_built: 2021-08-14T14:18Z
 urls:
   reference: https://ropenscilabs.github.io/learningtower//reference
   article: https://ropenscilabs.github.io/learningtower//articles
