@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Organisation for Economic Co-operation and Development(OECD), Programme for International Student Assessment PISA datasets in an easy-to-use format • learningtower</title>
+<title>Organisation for Economic Co-operation and Development(OECD), Programme for International Student Assessment (PISA) datasets in an easy-to-use format • learningtower</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Organisation for Economic Co-operation and Development(OECD), Programme for International Student Assessment PISA datasets in an easy-to-use format">
+<script src="pkgdown.js"></script><meta property="og:title" content="Organisation for Economic Co-operation and Development(OECD), Programme for International Student Assessment (PISA) datasets in an easy-to-use format">
 <meta property="og:description" content="The Programme for International Student Assessment (PISA) is a global study conducted by the Organization for Economic Cooperation and Development (OECD) in member and non-member countries to assess educational systems by assessing 15-year-old school students academic performance in mathematics, science, and reading. This datasets contains information on their scores and other socioeconomic characteristics, information about their school and its infrastructure, as well as the countries that are taking part in the program.">
 <meta property="og:image" content="https://ropenscilabs.github.io/learningtower/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -88,7 +88,6 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-
 <div id="learningtower-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#learningtower-" class="anchor"></a>learningtower <img src="reference/figures/logo.png" align="right" height="211">
@@ -96,11 +95,10 @@
 <!-- badges: start -->
 <p><img src="https://github.com/kevinwang09/learningtower/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></p>
 <!-- badges: end -->
-<p>The goal of <code>learningtower</code> is to provide a user-friendly R package to provide easy access to a subset of variables from PISA data collected from the <a href="http://www.oecd.org/pisa/data/">OECD</a>, for years 2000 - 2018, collected on a three year basis. This is an excellent dataset for exploring and visualizing data. This dataset is also be used for other analytically purposes as well as statistical computations.</p>
+<p>The goal of <code>learningtower</code> is to provide a user-friendly R package to provide easy access to a subset of variables from PISA data collected from the <a href="http://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis. This is an excellent dataset for exploring and visualizing data. This dataset can also be used for other analytically purposes as well as statistical computations.</p>
 <div id="what-is-pisa" class="section level2">
 <h2 class="hasAnchor">
-<a href="#what-is-pisa" class="anchor"></a><strong>What is PISA?</strong>
-</h2>
+<a href="#what-is-pisa" class="anchor"></a>What is PISA?</h2>
 <p><img src="reference/figures/pisa_image.png" width="54%" style="display: block; margin: auto;"></p>
 <p>The Programme for International Student Assessment (PISA) is an international assessment measuring student performance in reading, mathematical and scientific literacy.</p>
 <p>PISA assesses the extent to which 15-year-old students have acquired some of the knowledge and skills that are essential for full participation in society, and how well they are prepared for lifelong learning in the areas of reading, mathematical and scientific literacy.</p>
@@ -121,15 +119,15 @@
 <h2 class="hasAnchor">
 <a href="#data-description-and-usage" class="anchor"></a>Data Description and Usage</h2>
 <!-- Confirm with Kevin, The PISA assessment measures responses from individual students and school principals. A subset of features of these questionnaires can be found in `student` and `school` respectively (the latter coming soon). -->
-<p>The <code>learningtower</code> gives access to a subset of variables from PISA data originally collected and are available from the <a href="http://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis.</p>
-<p>The <code>learningtower</code> package contains mainly three datasets - student dataset - school dataset - countrycode dataset</p>
+<p>The <code>learningtower</code> gives access to a subset of variables from PISA data originally collected and are available from <a href="http://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis.</p>
+<p>The <code>learningtower</code> package contains mainly three datasets student dataset, school dataset and countrycode dataset</p>
 <p>This provides us with information about the students scores in mathematics, reading and science. Their school details, and which country they are from. Let’s have a look at how these datasets can be downloaded.</p>
 <!-- Confirm with Kevin, The PISA assessment measures responses from individual students and school principals. A subset of features of these questionnaires can be found in `student` and `school` respectively (the latter coming soon). -->
-<div id="student-data" class="section level3">
+<div id="student-dataset" class="section level3">
 <h3 class="hasAnchor">
-<a href="#student-data" class="anchor"></a>Student Data</h3>
-<p>The student dataset comprises scores and other data from the triennial testing of 15-year-olds worldwide. In addition, this dataset contains interesting information on their parents’ qualifications, family wealth, gender, and possession of computers, internet, cars, books, rooms, desks, and other similar variables. We can use these variable and dataset to give meaningful insights and perform useful analysis.</p>
-<p>Keeping in mind the package’s size constraints. The package only includes a portion of student data, called the student subset data, this subset of student data is available for all the years when PISA experiment took place. The full year wise student data set can be downloaded using the <code><a href="reference/load_student.html">load_student()</a></code> function included in this package.</p>
+<a href="#student-dataset" class="anchor"></a>Student Dataset</h3>
+<p>The student dataset comprises of the scores from the triennial testing of 15-year-olds worldwide. In addition, this dataset contains interesting information on their parents qualifications, family wealth, gender, and possession of computers, internet, cars, books, rooms, desks, and similar other variables.</p>
+<p>Keeping in mind the package’s size constraints. The package only includes a portion of student data, called the student subset data, this subset of student data is available for all the years when the PISA experiment took place. The full year wise student data set can be downloaded using the <code><a href="reference/load_student.html">load_student()</a></code> function included in this package.</p>
 <p>As an example, we can load the <code>student</code> data as follows:</p>
 <ul>
 <li>The student subset dataset can be loaded as follows</li>
@@ -137,7 +135,7 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://kevinwang09.github.io/learningtower/">learningtower</a></span><span class="op">)</span>
 
-<span class="co">#loading the data</span>
+<span class="co">#loading the student subset data for the year 2018</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">student_subset_2018</span><span class="op">)</span>
 
 
@@ -167,7 +165,7 @@
 <span class="va">student_data_2012_2018</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/load_student.html">load_student</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2012</span>, <span class="fl">2018</span><span class="op">)</span><span class="op">)</span>
 <span class="va">student_data_2000_2012_2018</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/load_student.html">load_student</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">2012</span>, <span class="fl">2018</span><span class="op">)</span><span class="op">)</span>
 
-<span class="co">#load the entire student </span>
+<span class="co">#load the entire student data</span>
 <span class="va">student_data_all</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/load_student.html">load_student</a></span><span class="op">(</span><span class="st">"all"</span><span class="op">)</span></code></pre></div>
 <p>See <code><a href="reference/student_subset_2000.html">?student_subset_2000</a></code> for information pertaining to variables captured.</p>
 </div>
@@ -192,12 +190,12 @@
 <span class="co">#&gt; # ... with 6 more variables: enrol_girls &lt;dbl&gt;, stratio &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   public_private &lt;fct&gt;, staff_shortage &lt;dbl&gt;, sch_wgt &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   school_size &lt;dbl&gt;</span></code></pre></div>
-<p>See <code><a href="reference/school.html">?school</a></code> for more information on the different variables that of the school dataset.</p>
+<p>See <code><a href="reference/school.html">?school</a></code> for more information on the different variables present in the the school dataset.</p>
 </div>
 <div id="countrycode-dataset" class="section level3">
 <h3 class="hasAnchor">
 <a href="#countrycode-dataset" class="anchor"></a>Countrycode Dataset</h3>
-<p>A dataset containing mapping of the <a href="https://www.oecd.org/pisa/sitedocument/PISA-2015-Technical-Report-Readers-Guide.pdf">country ISO code to the country name</a>.</p>
+<p>The countrycode dataset contains mapping of the <a href="https://www.oecd.org/pisa/sitedocument/PISA-2015-Technical-Report-Readers-Guide.pdf">country ISO code to the country name</a>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">#loading the countrycode data</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">countrycode</span><span class="op">)</span>
@@ -212,26 +210,51 @@
 <span class="co">#&gt; 4 AUT     Austria     </span>
 <span class="co">#&gt; 5 BEL     Belgium     </span>
 <span class="co">#&gt; 6 BRA     Brazil</span></code></pre></div>
-<p>See <code><a href="reference/countrycode.html">?countrycode</a></code> for more detailed information on the country names participating in this PISA experiment.</p>
+<p>See <code><a href="reference/countrycode.html">?countrycode</a></code> for more detailed information on the countries that participated in the PISA experiment.</p>
 </div>
 </div>
 <div id="exploring-the-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#exploring-the-data" class="anchor"></a>Exploring the data</h2>
-<p>In the <code>gif</code> shown below, we observe changing of the scales over-highlights the differences in the means between various countries.</p>
+<p>In the <code>gif</code> shown below, we observe changing of the scales over-highlights and the differences in the means between various countries.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
 <ul>
-<li><p>Similarly, You can find more code examples and data visualizations for exploring <code>learningtower</code> in <code><a href="articles/student_country.html">vignette("student_country")</a></code> and <code><a href="articles/student_school.html">vignette("student_school")</a></code>.</p></li>
-<li><p>Further data exploration can be found in our vignette exploring temporal trends <a href="https://kevinwang09.github.io/learningtower/articles/exploring_time.html">here</a>.</p></li>
+<li><p>Similarly, you can find more code examples and data visualizations for exploring <code>learningtower</code> through our vignettes.</p></li>
+<li><p>Further data exploration can be found in our articles exploring temporal trends <a href="https://kevinwang09.github.io/learningtower/articles/exploring_time.html">here</a>.</p></li>
 </ul>
 </div>
+<div id="citation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#citation" class="anchor"></a>Citation</h2>
+<p>To cite the <code>learningtower</code> package, please use:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="st">"learningtower"</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; To cite package 'learningtower' in publications use:</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   Kevin Wang, Paul Yacobellis, Erika Siregar, Sarah Romanes, Kim</span>
+<span class="co">#&gt;   Fitter, Giulio Valentino Dalla Riva, Dianne Cook, Nick Tierney and</span>
+<span class="co">#&gt;   Priya Dingorkar (2021). learningtower: Organisation for Economic</span>
+<span class="co">#&gt;   Co-operation and Development(OECD), Programme for International</span>
+<span class="co">#&gt;   Student Assessment PISA datasets in an easy-to-use format.</span>
+<span class="co">#&gt;   https://kevinwang09.github.io/learningtower/,</span>
+<span class="co">#&gt;   https://github.com/kevinwang09/learningtower.</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; A BibTeX entry for LaTeX users is</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   @Manual{,</span>
+<span class="co">#&gt;     title = {learningtower: Organisation for Economic Co-operation and Development(OECD), Programme for International Student Assessment PISA datasets in an easy-to-use format},</span>
+<span class="co">#&gt;     author = {Kevin Wang and Paul Yacobellis and Erika Siregar and Sarah Romanes and Kim Fitter and Giulio {Valentino Dalla Riva} and Dianne Cook and Nick Tierney and Priya Dingorkar},</span>
+<span class="co">#&gt;     year = {2021},</span>
+<span class="co">#&gt;     note = {https://kevinwang09.github.io/learningtower/, https://github.com/kevinwang09/learningtower},</span>
+<span class="co">#&gt;   }</span></code></pre></div>
 </div>
-<div id="acknowledgement" class="section level1">
-<h1 class="hasAnchor">
-<a href="#acknowledgement" class="anchor"></a>Acknowledgement</h1>
+<div id="acknowledgement" class="section level2">
+<h2 class="hasAnchor">
+<a href="#acknowledgement" class="anchor"></a>Acknowledgement</h2>
 <p>The work to make the data available is the effort of several researchers from Australia, New Zealand and Indonesia, conducted as part of the <a href="https://ozunconf19.ropensci.org">ROpenSci OzUnconf</a> held in Sydney, Dec 11-13, 2019.</p>
 </div>
-
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
