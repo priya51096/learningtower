@@ -2,9 +2,11 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
+  articles/Australia_trends: Australia_trends.html
+  articles/exploring_time: exploring_time.html
   student_country: student_country.html
   student_school: student_school.html
-last_built: 2021-08-19T15:03Z
+last_built: 2021-08-20T13:35Z
 urls:
   reference: https://ropenscilabs.github.io/learningtower//reference
   article: https://ropenscilabs.github.io/learningtower//articles

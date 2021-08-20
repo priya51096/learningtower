@@ -61,6 +61,12 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="articles/articles/Australia_trends.html">How did Australia do in the PISA study</a>
+    </li>
+    <li>
+      <a href="articles/articles/exploring_time.html">Exploring temporal trends</a>
+    </li>
+    <li>
       <a href="articles/student_country.html">Using the Student and Country Data</a>
     </li>
     <li>
@@ -88,6 +94,7 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="learningtower-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#learningtower-" class="anchor"></a>learningtower <img src="reference/figures/logo.png" align="right" height="211">
@@ -99,12 +106,18 @@
 <div id="what-is-pisa" class="section level2">
 <h2 class="hasAnchor">
 <a href="#what-is-pisa" class="anchor"></a>What is PISA?</h2>
-<p><img src="reference/figures/pisa_image.png" width="54%" style="display: block; margin: auto;"></p>
+<p align="center">
+<img width="400" height="400" src="reference/figures/pisa_image.png"></p>
+</div>
+</div>
+<div id="r-pic-echofalse-figaligncenter--knitrinclude_graphicsmanfigurespisa_imagepng-" class="section level1">
+<h1 class="hasAnchor">
+<a href="#r-pic-echofalse-figaligncenter--knitrinclude_graphicsmanfigurespisa_imagepng-" class="anchor"></a><code>{r pic, echo=FALSE, fig.align='center'} # knitr::include_graphics("man/figures/pisa_image.png") #</code>
+</h1>
 <p>The Programme for International Student Assessment (PISA) is an international assessment measuring student performance in reading, mathematical and scientific literacy.</p>
 <p>PISA assesses the extent to which 15-year-old students have acquired some of the knowledge and skills that are essential for full participation in society, and how well they are prepared for lifelong learning in the areas of reading, mathematical and scientific literacy.</p>
 <p>In 2018, PISA involved 79 countries and 600,000+ students worldwide.</p>
 <p>Read more about the Programme <a href="http://www.oecd.org/pisa/aboutpisa/">here</a>.</p>
-</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -118,11 +131,14 @@
 <div id="data-description-and-usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#data-description-and-usage" class="anchor"></a>Data Description and Usage</h2>
-<!-- Confirm with Kevin, The PISA assessment measures responses from individual students and school principals. A subset of features of these questionnaires can be found in `student` and `school` respectively (the latter coming soon). -->
 <p>The <code>learningtower</code> gives access to a subset of variables from PISA data originally collected and are available from <a href="http://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis.</p>
-<p>The <code>learningtower</code> package contains mainly three datasets student dataset, school dataset and countrycode dataset</p>
+<p>The <code>learningtower</code> package contains mainly three datasets:</p>
+<ul>
+<li><code>student</code></li>
+<li><code>school</code></li>
+<li><code>countrycode</code></li>
+</ul>
 <p>This provides us with information about the students scores in mathematics, reading and science. Their school details, and which country they are from. Let’s have a look at how these datasets can be downloaded.</p>
-<!-- Confirm with Kevin, The PISA assessment measures responses from individual students and school principals. A subset of features of these questionnaires can be found in `student` and `school` respectively (the latter coming soon). -->
 <div id="student-dataset" class="section level3">
 <h3 class="hasAnchor">
 <a href="#student-dataset" class="anchor"></a>Student Dataset</h3>
@@ -217,7 +233,45 @@
 <h2 class="hasAnchor">
 <a href="#exploring-the-data" class="anchor"></a>Exploring the data</h2>
 <p>In the <code>gif</code> shown below, we observe changing of the scales over-highlights and the differences in the means between various countries.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#&gt; NULL</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="kw">library</span>(gganimate)</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">library</span>(learningtower)</span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a>student &lt;-<span class="st"> </span><span class="kw">load_student</span>(<span class="st">"all"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>s &lt;-<span class="st"> </span>student <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="st">  </span><span class="kw">filter</span>(country <span class="op">==</span><span class="st"> "SGP"</span> <span class="op">|</span><span class="st"> </span>country <span class="op">==</span><span class="st"> "CAN"</span><span class="op">|</span><span class="st"> </span>country <span class="op">==</span><span class="st"> "FIN"</span> <span class="op">|</span><span class="st"> </span>country <span class="op">==</span><span class="st"> "NZL"</span> <span class="op">|</span><span class="st"> </span>country <span class="op">==</span><span class="st"> "USA"</span> <span class="op">|</span><span class="st"> </span>country <span class="op">==</span><span class="st"> "JPN"</span> <span class="op">|</span><span class="st"> </span>country <span class="op">==</span><span class="st"> "GBR"</span> <span class="op">|</span><span class="st"> </span>country <span class="op">==</span><span class="st"> "AUS"</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="st">  </span><span class="kw">group_by</span>(year, country) <span class="op">%&gt;%</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">math =</span> <span class="kw">weighted.mean</span>(math, stu_wgt, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>year, <span class="dt">y=</span>math, <span class="dt">group=</span>country, <span class="dt">color =</span> country)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="st">  </span><span class="kw">geom_point</span>()<span class="op">+</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="kw">c</span>(<span class="dv">250</span>,<span class="dv">800</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb7-17"><a href="#cb7-17"></a>       <span class="dt">y =</span> <span class="st">"Score"</span>,</span>
+<span id="cb7-18"><a href="#cb7-18"></a>       <span class="dt">title =</span> <span class="st">"Mathematics PISA Scores from 2000 - 2018"</span>)<span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">text =</span> <span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">20</span>)) <span class="op">+</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="st">  </span><span class="kw">scale_color_brewer</span>(<span class="dt">palette =</span> <span class="st">"Dark2"</span>) <span class="op">+</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a><span class="st">  </span><span class="kw">view_zoom_manual</span>(<span class="dt">pause_length =</span> <span class="dv">1</span>,</span>
+<span id="cb7-22"><a href="#cb7-22"></a>                   <span class="dt">step_length =</span> <span class="dv">10</span>, </span>
+<span id="cb7-23"><a href="#cb7-23"></a>                   <span class="dt">xmin =</span> <span class="kw">c</span>(<span class="dv">2000</span>, <span class="dv">2018</span>),</span>
+<span id="cb7-24"><a href="#cb7-24"></a>                   <span class="dt">xmax =</span> <span class="kw">c</span>(<span class="dv">2000</span>, <span class="dv">2018</span>),</span>
+<span id="cb7-25"><a href="#cb7-25"></a>                   <span class="dt">ymin =</span><span class="kw">c</span>(<span class="dv">200</span>, <span class="dv">450</span>),</span>
+<span id="cb7-26"><a href="#cb7-26"></a>                   <span class="dt">ymax =</span> <span class="kw">c</span>(<span class="dv">800</span>, <span class="dv">600</span>),</span>
+<span id="cb7-27"><a href="#cb7-27"></a>                   <span class="dt">wrap =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb7-28"><a href="#cb7-28"></a>                   <span class="dt">fixed_x =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb7-29"><a href="#cb7-29"></a></span>
+<span id="cb7-30"><a href="#cb7-30"></a>gif &lt;-<span class="st"> </span><span class="kw">animate</span>(s, </span>
+<span id="cb7-31"><a href="#cb7-31"></a>                <span class="dt">type=</span><span class="st">"cairo"</span>,</span>
+<span id="cb7-32"><a href="#cb7-32"></a>                <span class="dt">units=</span><span class="st">"in"</span>, </span>
+<span id="cb7-33"><a href="#cb7-33"></a>                <span class="dt">width=</span><span class="dv">9</span>, </span>
+<span id="cb7-34"><a href="#cb7-34"></a>                <span class="dt">height=</span><span class="dv">6</span>, </span>
+<span id="cb7-35"><a href="#cb7-35"></a>                <span class="dt">pointsize=</span><span class="dv">24</span>, </span>
+<span id="cb7-36"><a href="#cb7-36"></a>                <span class="dt">res=</span><span class="dv">200</span>)</span>
+<span id="cb7-37"><a href="#cb7-37"></a></span>
+<span id="cb7-38"><a href="#cb7-38"></a>gif</span></code></pre></div>
+<p>Attach the link to the gif.</p>
 <ul>
 <li><p>Similarly, you can find more code examples and data visualizations for exploring <code>learningtower</code> through our vignettes.</p></li>
 <li><p>Further data exploration can be found in our articles exploring temporal trends <a href="https://kevinwang09.github.io/learningtower/articles/exploring_time.html">here</a>.</p></li>
@@ -236,14 +290,14 @@
 <span class="co">#&gt;   Fitter, Giulio Valentino Dalla Riva, Dianne Cook, Nick Tierney and</span>
 <span class="co">#&gt;   Priya Dingorkar (2021). learningtower: Organisation for Economic</span>
 <span class="co">#&gt;   Co-operation and Development(OECD), Programme for International</span>
-<span class="co">#&gt;   Student Assessment PISA datasets in an easy-to-use format.</span>
+<span class="co">#&gt;   Student Assessment (PISA) datasets in an easy-to-use format.</span>
 <span class="co">#&gt;   https://kevinwang09.github.io/learningtower/,</span>
 <span class="co">#&gt;   https://github.com/kevinwang09/learningtower.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; A BibTeX entry for LaTeX users is</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   @Manual{,</span>
-<span class="co">#&gt;     title = {learningtower: Organisation for Economic Co-operation and Development(OECD), Programme for International Student Assessment PISA datasets in an easy-to-use format},</span>
+<span class="co">#&gt;     title = {learningtower: Organisation for Economic Co-operation and Development(OECD), Programme for International Student Assessment (PISA) datasets in an easy-to-use format},</span>
 <span class="co">#&gt;     author = {Kevin Wang and Paul Yacobellis and Erika Siregar and Sarah Romanes and Kim Fitter and Giulio {Valentino Dalla Riva} and Dianne Cook and Nick Tierney and Priya Dingorkar},</span>
 <span class="co">#&gt;     year = {2021},</span>
 <span class="co">#&gt;     note = {https://kevinwang09.github.io/learningtower/, https://github.com/kevinwang09/learningtower},</span>
@@ -255,6 +309,7 @@
 <p>The work to make the data available is the effort of several researchers from Australia, New Zealand and Indonesia, conducted as part of the <a href="https://ozunconf19.ropensci.org">ROpenSci OzUnconf</a> held in Sydney, Dec 11-13, 2019.</p>
 </div>
 </div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
