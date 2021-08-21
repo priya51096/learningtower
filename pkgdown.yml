@@ -4,9 +4,9 @@ pkgdown_sha: ~
 articles:
   articles/Australia_trends: Australia_trends.html
   articles/exploring_time: exploring_time.html
-  student_country: student_country.html
-  student_school: student_school.html
-last_built: 2021-08-21T16:21Z
+  learningtower_school: learningtower_school.html
+  learningtower_student: learningtower_student.html
+last_built: 2021-08-21T19:19Z
 urls:
   reference: https://kevinwang09.github.io/learningtower//reference
   article: https://kevinwang09.github.io/learningtower//articles
