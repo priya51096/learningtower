@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sample Student data from 2000-2018 PISA OECD data — student_subset_2000 • learningtower</title>
+<title>Sample student data available for the years 2000-2018 from the PISA OECD database — student_subset_2000 • learningtower</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -19,8 +19,8 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -46,12 +46,12 @@
 
 
 
-<meta property="og:title" content="Sample Student data from 2000-2018 PISA OECD data — student_subset_2000" />
-<meta property="og:description" content="A sample dataset containing scores and other information
+<meta property="og:title" content="Sample student data available for the years 2000-2018 from the PISA OECD database — student_subset_2000" />
+<meta property="og:description" content="A sample student subset dataset containing scores and other information
 from the triennial testing of 15 year olds around
 the globe. Original data available from
  https://www.oecd.org/pisa/data/." />
-<meta property="og:image" content="https://ropenscilabs.github.io/learningtower/logo.png" />
+<meta property="og:image" content="https://kevinwang09.github.io/learningtower/logo.png" />
 
 
 
@@ -140,13 +140,13 @@ the globe. Original data available from
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Sample Student data from 2000-2018 PISA OECD data</h1>
+    <h1>Sample student data available for the years 2000-2018 from the PISA OECD database</h1>
     <small class="dont-index">Source: <a href='https://github.com/kevinwang09/learningtower/blob/master/R/data.R'><code>R/data.R</code></a></small>
     <div class="hidden name"><code>student.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>A sample dataset containing scores and other information
+    <p>A sample student subset dataset containing scores and other information
 from the triennial testing of 15 year olds around
 the globe. Original data available from
  <a href='https://www.oecd.org/pisa/data/'>https://www.oecd.org/pisa/data/</a>.</p>
@@ -165,7 +165,8 @@ the globe. Original data available from
     Note that in 2000, all entries are missing.</p></li>
 <li><p><code>father_educ</code>: Highest level of father's education. Ranges from "less than ISCED1" to "ISCED 3A". Factor.
     Note that in 2000, all entries are missing.</p></li>
-<li><p><code>gender</code>: Gender of the student. Only "male" and "female" are recorded. Factor.</p></li>
+<li><p><code>gender</code>: Gender of the student. Only "male" and "female" are recorded. Factor.
+    Note that we call this variable gender and not sex as we provide data from the OECD PISA database.</p></li>
 <li><p><code>computer</code>: Possession of computer. Only "yes" and "no" are recorded. Factor.</p></li>
 <li><p><code>internet</code>: Access to internet. Only "yes" and "no" are recorded. Factor.</p></li>
 <li><p><code>math</code>: Simulated score in mathematics. Numeric.</p></li>
@@ -186,8 +187,8 @@ the globe. Original data available from
     "0", "1", "2" are code for no, one and two cars in the house. "3+" codes for three or more cars Factor.
     Note that in 2003, all entries are missing.</p></li>
 <li><p><code>book</code>: Number of books. Factor.
-    Note that encodings are different in 2000 and 2003 compare to all other years. Factor.
-    Evalute <code><a href='https://rdrr.io/r/base/table.html'>table(student$book, student$year)</a></code> for a demo.</p></li>
+    Note that encoding is different in the years 2000 and 2003 compared to all other years. Factor.
+    Evaluate <code><a href='https://rdrr.io/r/base/table.html'>table(student$book, student$year)</a></code> for a demo.</p></li>
 <li><p><code>wealth</code>: Family wealth. Numeric.
     Note that in 2003, all entries are missing.</p></li>
 <li><p><code>escs</code>: Index of economic, social and cultural status. Numeric.</p></li>
