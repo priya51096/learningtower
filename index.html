@@ -101,7 +101,7 @@
 <!-- badges: start -->
 <p><img src="https://github.com/kevinwang09/learningtower/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></p>
 <!-- badges: end -->
-<p>The goal of <code>learningtower</code> is to provide a user-friendly R package to provide easy access to a subset of variables from PISA data collected from the <a href="http://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis. This is an excellent dataset for exploring and visualizing data. This dataset can also be used for other analytically purposes as well as statistical computations.</p>
+<p>The goal of <code>learningtower</code> is to provide a user-friendly R package to provide easy access to a subset of variables from PISA data collected from the <a href="https://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis. This is an excellent dataset for exploring and visualizing data. This dataset can also be used for other analytically purposes as well as statistical computations.</p>
 <div id="what-is-pisa" class="section level2">
 <h2 class="hasAnchor">
 <a href="#what-is-pisa" class="anchor"></a>What is PISA?</h2>
@@ -110,7 +110,7 @@
 <p>The Programme for International Student Assessment (PISA) is an international assessment measuring student performance in reading, mathematical and scientific literacy.</p>
 <p>PISA assesses the extent to which 15-year-old students have acquired some of the knowledge and skills that are essential for full participation in society, and how well they are prepared for lifelong learning in the areas of reading, mathematical and scientific literacy.</p>
 <p>In 2018, PISA involved 79 countries and 600,000+ students worldwide.</p>
-<p>Read more about the Programme <a href="http://www.oecd.org/pisa/aboutpisa/">here</a>.</p>
+<p>Read more about the Programme <a href="https://www.oecd.org/pisa/aboutpisa/">here</a>.</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -125,7 +125,7 @@
 <div id="data-description-and-usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#data-description-and-usage" class="anchor"></a>Data Description and Usage</h2>
-<p>The <code>learningtower</code> gives access to a subset of variables from PISA data originally collected and are available from <a href="http://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis.</p>
+<p>The <code>learningtower</code> gives access to a subset of variables from PISA data originally collected and are available from <a href="https://www.oecd.org/pisa/data/">OECD</a>, for the years 2000 - 2018, collected on a three year basis.</p>
 <p>The <code>learningtower</code> package contains mainly three datasets:</p>
 <ul>
 <li><code>student</code></li>
@@ -150,7 +150,7 @@
 
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">student_subset_2018</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 6 x 22</span>
+<span class="co">#&gt; # A tibble: 6 × 22</span>
 <span class="co">#&gt; # Groups:   country [1]</span>
 <span class="co">#&gt;   year  country school_id student_id mother_educ father_educ gender computer</span>
 <span class="co">#&gt;   &lt;fct&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;fct&gt;      &lt;fct&gt;       &lt;fct&gt;       &lt;fct&gt;  &lt;fct&gt;   </span>
@@ -160,7 +160,7 @@
 <span class="co">#&gt; 4 2018  ALB     800278    803561     ISCED 2     ISCED 2     male   yes     </span>
 <span class="co">#&gt; 5 2018  ALB     800055    801356     ISCED 3A    ISCED 2     female &lt;NA&gt;    </span>
 <span class="co">#&gt; 6 2018  ALB     800279    804382     ISCED 3A    ISCED 3A    male   yes     </span>
-<span class="co">#&gt; # ... with 14 more variables: internet &lt;fct&gt;, math &lt;dbl&gt;, read &lt;dbl&gt;,</span>
+<span class="co">#&gt; # … with 14 more variables: internet &lt;fct&gt;, math &lt;dbl&gt;, read &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   science &lt;dbl&gt;, stu_wgt &lt;dbl&gt;, desk &lt;fct&gt;, room &lt;fct&gt;, dishwasher &lt;fct&gt;,</span>
 <span class="co">#&gt; #   television &lt;fct&gt;, computer_n &lt;fct&gt;, car &lt;fct&gt;, book &lt;fct&gt;, wealth &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   escs &lt;dbl&gt;</span></code></pre></div>
@@ -188,7 +188,7 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">school</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">school</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 6 x 13</span>
+<span class="co">#&gt; # A tibble: 6 × 13</span>
 <span class="co">#&gt;   year  country school_id fund_gov fund_fees fund_donation enrol_boys</span>
 <span class="co">#&gt;   &lt;fct&gt; &lt;fct&gt;   &lt;fct&gt;        &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;      &lt;dbl&gt;</span>
 <span class="co">#&gt; 1 2000  ALB     01001          100         0             0       1191</span>
@@ -197,7 +197,7 @@
 <span class="co">#&gt; 4 2000  ALB     01010          100         0             0        114</span>
 <span class="co">#&gt; 5 2000  ALB     01013            0        50            30        250</span>
 <span class="co">#&gt; 6 2000  ALB     01017           95         2             3        771</span>
-<span class="co">#&gt; # ... with 6 more variables: enrol_girls &lt;dbl&gt;, stratio &lt;dbl&gt;,</span>
+<span class="co">#&gt; # … with 6 more variables: enrol_girls &lt;dbl&gt;, stratio &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   public_private &lt;fct&gt;, staff_shortage &lt;dbl&gt;, sch_wgt &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   school_size &lt;dbl&gt;</span></code></pre></div>
 <p>See <code><a href="reference/school.html">?school</a></code> for more information on the different variables present in the the school dataset.</p>
@@ -211,7 +211,7 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">countrycode</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">countrycode</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 6 x 2</span>
+<span class="co">#&gt; # A tibble: 6 × 2</span>
 <span class="co">#&gt;   country country_name</span>
 <span class="co">#&gt;   &lt;chr&gt;   &lt;chr&gt;       </span>
 <span class="co">#&gt; 1 AZE     Azerbaijan  </span>
@@ -228,7 +228,7 @@
 <a href="#exploring-the-data" class="anchor"></a>Exploring the data</h2>
 <p>In the <code>gif</code> shown below, shows the weighted mean of mathematics scores of these 15 year old students for a few selected countries, this <code>gif</code> helps us observe changing of the scales over-highlights and the differences in the means between various countries in the different years.</p>
 <p align="center">
-<img width="630" height="540" src="reference/figures/readme.gif"></p>
+<img width="630" height="540" src="articles/articles/readme.gif"></p>
 <ul>
 <li><p>Similarly, you can find more code examples and data visualizations for exploring <code>learningtower</code> through our vignettes and articles</p></li>
 <li><p>Further data exploration can be found in our articles exploring temporal trends <a href="https://kevinwang09.github.io/learningtower/articles/exploring_time.html">here</a>.</p></li>
